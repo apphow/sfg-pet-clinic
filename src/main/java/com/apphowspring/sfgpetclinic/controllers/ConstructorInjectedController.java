@@ -1,7 +1,9 @@
 package com.apphowspring.sfgpetclinic.controllers;
 
 import com.apphowspring.sfgpetclinic.services.GreetingService;
+import org.springframework.stereotype.Controller;
 
+@Controller
 public class ConstructorInjectedController {
 
     private final GreetingService greetingService;
