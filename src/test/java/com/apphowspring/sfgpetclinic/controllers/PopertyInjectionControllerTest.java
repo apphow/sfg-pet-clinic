@@ -1,6 +1,6 @@
 package com.apphowspring.sfgpetclinic.controllers;
 
-import com.apphowspring.sfgpetclinic.services.GreetingServiceImpl;
+import com.apphowspring.sfgpetclinic.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -19,7 +19,7 @@ class PopertyInjectionControllerTest {
         //by creating the object
         controller = new PropertyInjectedController();
 
-        controller.greetingService = new GreetingServiceImpl();
+        controller.greetingService = new ConstructorGreetingService();
         }
 
     @Test

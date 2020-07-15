@@ -23,21 +23,15 @@ public class SfgPetClinicApplication {
         System.out.println(greeting);
 
         System.out.println("_______Property");
-
         PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");
-
         System.out.println(propertyInjectedController.getGreeting());
 
         System.out.println("________Setter");
-
         SetterInjectedController setterInjectedController = (SetterInjectedController) ctx.getBean("setterInjectedController");
-
         System.out.println(setterInjectedController.getGreeting());
 
         System.out.println("________Constructor");
-
         ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) ctx.getBean("constructorInjectedController");
-
         System.out.println(constructorInjectedController.getGreeting());
     }
 }
