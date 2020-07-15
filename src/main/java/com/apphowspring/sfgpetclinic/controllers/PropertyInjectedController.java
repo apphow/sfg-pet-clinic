@@ -2,7 +2,7 @@ package com.apphowspring.sfgpetclinic.controllers;
 
 import com.apphowspring.sfgpetclinic.services.GreetingService;
 
-public class PopertyInjectionController {
+public class PropertyInjectedController {
 
     public GreetingService greetingService;
 
