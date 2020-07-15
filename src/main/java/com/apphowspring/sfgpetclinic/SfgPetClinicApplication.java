@@ -1,9 +1,6 @@
 package com.apphowspring.sfgpetclinic;
 
-import com.apphowspring.sfgpetclinic.controllers.ConstructorInjectedController;
-import com.apphowspring.sfgpetclinic.controllers.MyController;
-import com.apphowspring.sfgpetclinic.controllers.PropertyInjectedController;
-import com.apphowspring.sfgpetclinic.controllers.SetterInjectedController;
+import com.apphowspring.sfgpetclinic.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -12,9 +9,13 @@ import org.springframework.context.ApplicationContext;
 public class SfgPetClinicApplication {
 
     public static void main(String[] args) {
+
         ApplicationContext ctx = SpringApplication.run(SfgPetClinicApplication.class, args);
 
         // ask the context for an instance of MyController
+
+        I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+        System.out.println(i18nController.sayHello());
 
         MyController myController = (MyController) ctx.getBean("myController");
 
