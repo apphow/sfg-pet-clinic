@@ -18,9 +18,8 @@ public class SfgPetClinicApplication {
 
         MyController myController = (MyController) ctx.getBean("myController");
 
-        String greeting = myController.sayHello();
-
-        System.out.println(greeting);
+        System.out.println("__________Primary bean");
+        System.out.println(myController.sayHello());
 
         System.out.println("_______Property");
         PropertyInjectedController propertyInjectedController = (PropertyInjectedController) ctx.getBean("propertyInjectedController");

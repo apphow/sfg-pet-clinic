@@ -1,13 +1,19 @@
 package com.apphowspring.sfgpetclinic.controllers;
 
+import com.apphowspring.sfgpetclinic.services.GreetingService;
 import org.springframework.stereotype.Controller;
 
 @Controller
 public class MyController {
 
-    public String sayHello() {
-        System.out.println("HI there");
+    // set up to use PrimaryGreetingService
+    private final GreetingService greetingService;
 
-        return "Hi everyone";
+    public MyController(GreetingService greetingService) {
+        this.greetingService = greetingService;
+    }
+
+    public String sayHello() {
+        return greetingService.sayGreeting();
     }
 }
